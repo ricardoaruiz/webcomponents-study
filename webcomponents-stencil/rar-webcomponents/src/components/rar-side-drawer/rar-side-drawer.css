@@ -1,0 +1,106 @@
+@import url("../../global/global.css");
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--backdrop-color, var(--_backdrop-color));
+  z-index: var(--_layer-backrop);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-out;
+}
+
+.backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 30rem;
+  max-width: 80%;
+  height: 100vh;
+  transition: left 0.4s ease-out;
+
+  background-color: var(--background-color, var(--_background-color));
+  box-shadow: var(--box-shadow, var(--_box-shadow));
+  z-index: var(--_layer-base);
+}
+
+aside.open {
+  left: 0;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  background-color: var(--primary-color, var(--_primary-color));
+  color: var(--_white);
+}
+header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+header button {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--_white);
+  align-self: stretch;
+  padding: 0 0.5rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  margin: 1rem 0;
+}
+.tabs button {
+  width: 30%;
+  padding: 0.25rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.tabs button {
+  font-size: 1rem;
+  border: 1px solid var(--primary-color, var(--_primary-color));
+  background-color: var(--primary-color, var(--_primary-color));
+  color: var(--primary-color-inverse, var(--_primary-color-inverse));
+}
+.tabs button:hover {
+  background-color: var(--second-color, var(--_second-color));
+  color: var(--second-color-inverse, var(--_second-color-inverse));
+}
+.tabs button.active {
+  cursor: default;
+  background-color: var(--second-color, var(--_second-color));
+  color: var(--second-color-inverse, var(--_second-color-inverse));
+}
+
+/* Tab */
+.tab {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+
+  transition: opacity 0.3s ease-out;
+}
+.tab.active {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+

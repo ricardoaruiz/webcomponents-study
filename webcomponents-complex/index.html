@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./modal.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 2rem;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>Please confirm your choise</p>
+    <button onclick="handleShowDetailsButtonClick()">Show Details & confirm</button>
+
+
+    <rar-modal>
+        <h1 slot="title">Please Confirm the choice</h1>
+
+        <div slot="content">
+            <p>This is the content!!!!</p>
+        </div>
+    </rar-modal>
+</body>
+
+<script>
+    const showDetailsButton = document.querySelector('button')
+    const modal = document.querySelector('rar-modal')
+
+    modal.addEventListener('confirm', () => {
+        console.log('Modal confirm...')
+    })
+
+    modal.addEventListener('cancel', () => {
+        console.log('Modal cancel...')
+    })
+
+    const handleShowDetailsButtonClick = () => {
+        modal.open()
+    }
+
+    showDetailsButton.addEventListener('click', handleShowDetailsButtonClick)
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <script src="./tooltip.js"></script>
+    <script src="./confirm-link.js"></script>
+    <style>
+        :root {
+            --color-primary: #70d1f1;
+            --color-secondary: #6ae46a;
+            --font-family1: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: sans-serif;
+        }
+       
+        .tooltip {
+            background-color: green;
+        }
+
+        .tooltip-text-italic {
+            display: inline-block;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        <rar-tooltip 
+            class="tooltip"
+            text="Web Components is a set of standards"
+        >
+            <span>Web Components are awesome!</span>
+        </rar-tooltip> 
+        are awesome!
+    </p>    
+    
+    <rar-tooltip>
+        <div class="tooltip-text-italic">Teste</div>
+    </rar-tooltip>
+
+    <br>
+    <br>
+    <a is="rar-confirm-link" href="http://www.google.com">Google</a>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export declare const ALPHAVANTAGE_API_KEY = "RRFIH5T6P2NON4VR.";

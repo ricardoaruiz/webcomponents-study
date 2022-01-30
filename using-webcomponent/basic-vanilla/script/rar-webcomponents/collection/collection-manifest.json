@@ -1,0 +1,16 @@
+{
+  "entries": [
+    "./components/rar-side-drawer/rar-side-drawer.js",
+    "./components/rar-spinner/rar-spinner.js",
+    "./components/rar-stock-finder/rar-stock-finder.js",
+    "./components/rar-stock-price/rar-stock-price.js",
+    "./components/rar-tooltip/rar-tooltip.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "2.13.0",
+    "typescriptVersion": "4.3.5"
+  },
+  "collections": [],
+  "bundles": []
+}

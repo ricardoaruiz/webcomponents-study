@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components</title>
+    <script src="./tooltip.js"></script>
+    <script src="./confirm-link.js"></script>
+    <style>
+        div {
+            border: 3px solid orange
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <rar-tooltip text="Web Components is a set of standards">Web Components are awesome!</rar-tooltip> are awesome!
+    </p>    
+    
+    <rar-tooltip></rar-tooltip>
+
+    <br>
+    <a is="rar-confirm-link" href="http://www.google.com">Google</a>
+</body>
+</html>

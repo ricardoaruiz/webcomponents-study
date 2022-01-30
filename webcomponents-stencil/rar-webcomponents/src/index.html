@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/rar-webcomponents.esm.js"></script>
+    <script nomodule src="/build/rar-webcomponents.js"></script>
+
+    <style>
+      :root {
+        --primary-color: #338633;
+        --primary-color-inverse: #fff;
+        --second-color: #0b630f;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .side-nav ul {
+        list-style: none;
+      }
+
+      .side-nav li {
+        margin: 1rem 0;
+      }
+
+      .side-nav a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      .contact-info {
+        padding: 0rem 2rem;
+      }
+
+    </style>
+
+  </head>
+  <body>
+
+    <!-- Using tooltip as example -->
+    <div style="display: flex; justify-content: space-between; background-color: lightgray; padding: 2rem 0;">
+      <rar-tooltip text="Click at this button to open the Side Drawer menu.">
+        <button id="btnOpenMenu">Open Menu</button>
+      </rar-tooltip>
+
+      <rar-tooltip text="Click at this button to close the Side Drawer menu.">
+        <button id="btnCloseMenu">Close Menu</button>
+      </rar-tooltip>
+    </div>
+
+    <br/>
+    <br/>
+
+    <!-- Stock Symbol Finder -->
+    <rar-stock-finder></rar-stock-finder>
+
+    <br>
+    <br>
+
+    <!-- Sotck Price -->
+    <rar-stock-price></rar-stock-price>
+    <!-- <rar-stock-price symbol="IBM"></rar-stock-price> -->
+
+    <!-- Side Drawer -->
+    <rar-side-drawer title="Side Menu">
+      <nav class="side-nav" slot="navigation">
+        <ul>
+          <li><a href="">A Link</a></li>
+          <li><a href="">Another Link</a></li>
+          <li><a href="">A third Link</a></li>
+        </ul>
+      </nav>
+      <div class="contact-info" slot="contact">
+        <h2>Contact Information</h2>
+        <p>You can reach us via phone or email</p>
+        <ul>
+          <li>Phone: +5519999412203</li>
+          <li>E-mail: someemail@email.com</li>
+        </ul>
+      </div>
+    </rar-side-drawer>
+
+    <script>
+      const btnOpenMenu = document.querySelector('#btnOpenMenu')
+      const drawer = document.querySelector('rar-side-drawer')
+
+      btnOpenMenu.addEventListener('click', () => {
+        drawer.opened = true
+      })
+
+      drawer.addEventListener('closeDrawer', () => {
+        drawer.opened = false
+      })
+
+      btnCloseMenu.addEventListener('click', () => {
+        drawer.opened = false
+      })
+
+      // const stockPrice = document.querySelector('rar-stock-price')
+      const stockFinder = document.querySelector('rar-stock-finder')
+      stockFinder.addEventListener('symbolSelected', (event) => {
+        console.log('event', event)
+        // stockPrice.stockSymbolProp = event.detail
+      })
+    </script>
+
+  </body>
+</html>

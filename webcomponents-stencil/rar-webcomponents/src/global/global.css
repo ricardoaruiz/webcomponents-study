@@ -1,0 +1,20 @@
+:host {
+  --_white: #fff;
+  --_black: #333;
+
+  --_primary-color: #4a00dd;
+  --_primary-color-inverse: #e6e6e6;
+
+  --_second-color: #2d1363;
+  --_second-color-inverse: #e6e6e6;
+
+  --_box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  --_box-shadow-error: 2px 4px 8px rgba(255,0,0,0.2);
+
+  --_backdrop-color: rgba(0,0,0,0.4);
+
+  --_background-color: #f3f3f3;
+
+  --_layer-backdrop: 10;
+  --_layer-base: 20;
+}

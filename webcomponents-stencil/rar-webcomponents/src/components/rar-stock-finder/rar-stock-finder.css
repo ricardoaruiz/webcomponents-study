@@ -1,0 +1,88 @@
+@import url("../../global/global.css");
+
+:host {
+  display: block;
+  font-family: sans-serif;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow, var(--_box-shadow));
+  background-color: var(--_white);
+  color: var(--_black);
+  max-width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  flex: 1;
+  width: 100%;
+  font: inherit;
+  color: var(--primary-color, var(--_primary-color));
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--primary-color, var(--_primary-color));
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+form input::placeholder {
+  color: var(--primary-color, var(--_primary-color));
+}
+
+form button {
+  font: inherit;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid var(--primary-color, var(--_primary-color));
+  background-color: var(--primary-color, var(--_primary-color));
+  color: var(--primary-color-inverse, var(--_white));
+  cursor: pointer;
+  outline: none;
+  align-self: flex-end;
+  min-width: 8rem;
+}
+
+form button:hover,
+form button:active {
+  background-color: var(--second-color, var(--_second-color));
+  border: 1px solid var(--second-color, var(--_second-color));
+}
+
+form button:disabled {
+  background-color: var(--primary-color, var(--_primary-color));
+  opacity: 0.5;
+  cursor: default;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 15rem;
+  overflow-y: auto;
+}
+
+li {
+  margin: 0.25rem 0;
+  padding: 0.4rem;
+  color: var(--primary-color, var(--_primary-color));
+  border: 1px solid var(--primary-color, var(--_primary-color));
+  border-radius: 0.25rem;
+}
+
+li:hover {
+  background-color: var(--primary-color, var(--_primary-color));
+  color: var(--primary-color-inverse, var(--_black));
+  color: var(--_white);
+  cursor: pointer;
+}

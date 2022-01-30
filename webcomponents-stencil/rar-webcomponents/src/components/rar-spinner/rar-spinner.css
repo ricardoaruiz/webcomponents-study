@@ -1,0 +1,19 @@
+:host {
+  --_primary-color: #3b01b3;
+  display: block;
+}
+
+.loader{
+  width: 34px;
+  height: 34px;
+  margin: 0 auto;
+  border: 3px solid transparent;
+  border-top: 3px solid var(--primary-color, var(--_primary-color));
+  border-radius: 50%;
+  animation: rotate 0.4s infinite linear;
+}
+
+@keyframes rotate{
+  from{transform: rotate(0)}
+  to{transform: rotate(360deg)}
+}

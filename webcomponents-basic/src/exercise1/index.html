@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./custom-button.js"></script>
+    <title>Web Components</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <rar-custom-button 
+        message="Custom message 1!"
+      >
+        Click here to toogle message 1
+      </rar-custom-button>
+
+      <rar-custom-button 
+        message="Custom message 2!"
+        is-visible="true"
+      >
+        Click here to toogle message 2
+      </rar-custom-button>
+    </div>
+
+  </body>
+</html>
